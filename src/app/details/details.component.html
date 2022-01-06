@@ -1,0 +1,24 @@
+<div class="container" *ngIf="anime">
+  <div class="row">
+    <div class="col">
+      <div class="card bg-dark text-white d-flex align-items-center">
+        <img class="card-img" [src]="anime.img" [alt]="animeName" />
+        <div class="card-img-overlay">
+          <h5 class="card-title">
+            <a [routerLink]="['/']">Voltar</a> {{ animeName }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 py-3" *ngFor="let item of anime.data">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">fato #{{ item.fact_id }}</h5>
+          <p class="card-text">{{ item.fact }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-md-4 py-2" *ngFor="let item of animes">
+      <div class="card">
+        <img class="card-img" [src]="item.anime_img" [alt]="item.anime_name" />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.anime_name }}</h5>
+
+          <a
+            [routerLink]="['/details/', item.anime_name]"
+            class="btn btn-primary"
+            >ver detalhes</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
